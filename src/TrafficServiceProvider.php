@@ -10,7 +10,7 @@ class TrafficServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-
+        $this->loadTranslationsFrom(__DIR__ . '/../lang', 'traffic');
     }
 
     public function register()

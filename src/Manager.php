@@ -134,7 +134,7 @@ class Manager
         }
 
         if (static::isStatusFails($status)) {
-            $transMessage = trans("services.skoda_traffic.{$status}");
+            $transMessage = trans("traffic::services.skoda_traffic.{$status}");
             // Дописываем языковое сообщение в массив ответа с ошибкой и логируем её
             $responseArray['error_msg_trans'] = $transMessage;
             Log::error('Не удалось отправить событие в Traffic. Статус ответа - ' . $transMessage);
