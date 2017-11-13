@@ -1,0 +1,40 @@
+{
+  "name": "kodix/traffic-api",
+  "description": "API SDK Traffic CRM for Laravel",
+  "keywords": [
+    "traffic crm"
+  ],
+  "license": "MIT",
+  "type": "library",
+  "require": {
+    "php": "^7",
+    "laravel/framework": "5.*",
+    "mockery/mockery": "^0.9",
+    "guzzlehttp/guzzle": "6.*",
+    "soapbox/laravel-formatter": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~5.0",
+    "orchestra/testbench": "~3.0"
+  },
+  "autoload": {
+    "classmap": [
+      "tests"
+    ],
+    "psr-4": {
+      "Kodix\\Traffic\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Kodix\\Traffic\\TrafficServiceProvider"
+      ]
+    }
+  }
+}
