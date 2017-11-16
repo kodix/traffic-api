@@ -9,6 +9,14 @@ use Kodix\Traffic\Contracts\ExternalEntity;
 
 class MeetingEntity implements ExternalEntity
 {
+    const TYPE_SERVICE = 'SERVICE';
+
+    const TYPE_CONSULTATION = 'CONSULTATION';
+
+    const TYPE_TEST_DRIVE = 'TEST_DRIVE';
+
+    const STATUS_NEW_REQUEST = 'NEW_REQUEST_FOR_TO_OR_REPAIR';
+
     protected $data;
 
     public function __construct(array $data = [])
