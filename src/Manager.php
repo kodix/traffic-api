@@ -336,6 +336,9 @@ class Manager
             throw new ParticipantAlreadyRegistered($id);
         }
 
+        // Если участник зарегистрирован, то допишем поле id участника в общем виде
+        $participant['participant_id'] = array_get($participant, 'id');
+
         return $participant;
     }
 
