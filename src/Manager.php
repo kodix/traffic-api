@@ -327,7 +327,7 @@ class Manager
         $participant = $entity->newEntity();
 
         try {
-            $this->send(new RegisterParticipant($entity));
+            $response = $this->send(new RegisterParticipant($entity));
         } catch (UnknownResultException $exception) {
             if (!($id = array_get($exception->getResponse(), 'id'))) {
                 throw $exception;
@@ -337,7 +337,7 @@ class Manager
         }
 
         // Если участник зарегистрирован, то допишем поле id участника в общем виде
-        $participant['participant_id'] = array_get($participant, 'id');
+        $participant['participant_id'] = array_get($response, 'id');
 
         return $participant;
     }
