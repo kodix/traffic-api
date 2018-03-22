@@ -11,7 +11,7 @@
     "laravel/framework": "5.*",
     "mockery/mockery": "^0.9",
     "guzzlehttp/guzzle": "6.*",
-    "soapbox/laravel-formatter": "dev-master"
+    "soapbox/laravel-formatter": "2.*"
   },
   "require-dev": {
     "phpunit/phpunit": "~5.0",
